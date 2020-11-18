@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formlar</title>
+
+<style>
+*{
+        margin:0;
+        outline:0;
+}
+body{
+        background-image:url('bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+
+        }
+.layer{
+        position:absolute;
+        background:rgba(136,86,142,0.7);
+        height:100%;
+        width:100%;
+
+}
+#sahe{
+        position: absolute;
+        width:33%;
+
+        left:33%;
+        top:17%;
+        background-color: #27153F;
+        }
+#ad,#email,#age,#role,#rec,#feature,#imp,#com{
+        display:flex;
+        position: relative;
+        width:90%;
+        color:white;
+        left:5%;
+        margin-top: 2%;
+}
+
+select{
+        position: relative;
+        width: 92%;
+        left:5%;
+
+}
+.rec,.imp{
+        display:flex;
+        position: relative;
+        width:90%;
+        color:white;
+        left:7%;
+}
+
+input[type='radio'],input[type='checkbox']{
+        display:flex;
+        position: relative;
+        left:-2%;
+}
+
+.in,textarea{
+        position: relative;
+        width: 90%;
+        resize:none;
+        left:5%;
+}
+#submit{
+        position: relative;
+        width: 92%;
+        left:5%;
+        color:white;
+        background-color:#1BCE26;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+
+        -webkit-appearance: none;
+}
+
+#yazi{
+        color:white;
+        position:relative;
+        margin-top:3%;
+}
+</style>
+</head>
+<body>
+
+<div class="layer">
+    <center id="yazi"><h1>freeCodeCamp Survey Form</h1><br>
+<i>Thank you for taking the time to help us improve the platform </i>
+</center>
+    <div id="sahe">
+
+        <form>
+            <label id="ad" for="ad" >Name</label>
+            <input name="in" type="text" class="in" placeholder="Enter your name" required>
+            <label id="email" for="email">Email</label>
+            <input name="in" type="email" class="in" placeholder="Enter your Email" required>
+            <label id="age" for="age" >Age (optional)</label>
+            <input name="in" type="number" class="in" placeholder="Age">
+            <label id="role" for="role">Which option best describes your current role ?</label>
+            <select required><option selected disabled hidden>Select current role</option><option>Role_1</option><option>Role_2</option><option>Role_3</option></select>
+            <label id="rec" for="rec" >Would you recommend freeCodeCamp to a friend ?</label><br>
+            <label class="rec"><input name="rec" type="radio"> Definitely</label>
+            <label class="rec"><input name="rec" type="radio">Maybe</label>
+            <label class="rec"><input name="rec" type="radio"> Not sure</label>
+            <label id="feature" for="feature">What is your favorite feature of  freeCodeCamp ?</label>
+            <select required><option selected disabled hidden>Select an option</option><option>opt_1</option><option>opt_2</option><option>opt_3</option><option>opt_4</option><option>opt_5</option></select>
+            <label id="imp" for="imp" >What would you like to see improved ?<br>(Check all that apply)</label><br>
+            <label class="imp"><input name="imp" type="checkbox">Front-end Projects</label>
+            <label class="imp"><input name="imp" type="checkbox">Back-end Projects</label>
+            <label class="imp"><input name="imp" type="checkbox">Data Visualization</label>
+            <label class="imp"><input name="imp" type="checkbox">Challenges</label>
+            <label class="imp"><input name="imp" type="checkbox">Open Source Community</label>
+            <label class="imp"><input name="imp" type="checkbox">Gitter help rooms</label>
+            <label class="imp"><input name="imp" type="checkbox">Videos</label>
+            <label class="imp"><input name="imp" type="checkbox">City Meetups</label>
+            <label class="imp"><input name="imp" type="checkbox">Wiki</label>
+            <label class="imp"><input name="imp" type="checkbox">Forum</label>
+            <label class="imp"><input name="imp" type="checkbox">Additional Courses</label>
+            <label id="com" for="com">Any comments or suggestions ?</label>
+            <textarea  rows="5" placeholder="Enter your comment here..."></textarea>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+
+
+    </div>
+</div>
+</body>
+</html>
